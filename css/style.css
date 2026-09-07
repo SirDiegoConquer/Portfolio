@@ -1,0 +1,591 @@
+/* Fonts*/
+/* Sizes Container */
+/* Colors */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Outfit", sans-serif;
+}
+
+img {
+  max-width: 100%;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-family: "Big Shoulders", sans-serif;
+}
+
+.hero {
+  margin-bottom: 120px;
+}
+@media (min-width: 1200px) {
+  .hero {
+    padding-top: 70px;
+    padding-left: 100px;
+    padding-right: 100px;
+  }
+}
+.hero .hero-1 {
+  padding-bottom: 10px;
+}
+.hero .hero-1 img {
+  width: 100%;
+  height: 335px;
+  object-fit: cover;
+}
+.hero .hero-2 .hero-2__title {
+  font-family: "Big Shoulders", sans-serif;
+  font-size: 50px;
+  font-weight: 900;
+  line-height: 45px;
+  color: #151515;
+  padding-bottom: 30px;
+  padding-top: 10px;
+}
+.hero .hero-2 .hero-2__description {
+  font-family: "Outfit", sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 30px;
+  color: #444444;
+  padding-bottom: 20px;
+  padding-right: 50px;
+}
+.hero .hero-3 {
+  padding-bottom: 20px;
+}
+.hero .hero-3 img {
+  width: 100%;
+  height: 480px;
+  object-fit: cover;
+}
+.hero .hero-4 {
+  padding-bottom: 20px;
+}
+.hero .hero-4 img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+}
+.hero .hero-5 {
+  background-color: #151515;
+}
+.hero .hero-5 .hero-5__title {
+  font-family: "Big Shoulders", sans-serif;
+  font-size: 50px;
+  font-weight: 900;
+  line-height: 45px;
+  color: #FFFFFF;
+  padding: 40px 25px 20px 25px;
+}
+.hero .hero-5 .hero-5__description {
+  font-family: "Outfit", sans-serif;
+  font-size: 18px;
+  font-weight: 300;
+  line-height: 30px;
+  color: #FFFFFF;
+  padding: 10px 25px 50px 25px;
+}
+@media (min-width: 768px) {
+  .hero .container {
+    display: grid;
+    grid-template-columns: 1.2fr 0.4fr 1fr 1.5fr;
+    grid-template-areas: "hero2 hero2 hero1 hero1" "hero3 hero3 hero3 hero4" "hero3 hero3 hero3 hero5";
+    gap: 10px;
+  }
+  .hero .hero-1 {
+    grid-area: hero1;
+    padding: 0;
+  }
+  .hero .hero-1 img {
+    height: 100%;
+  }
+  .hero .hero-2 {
+    grid-area: hero2;
+    padding: 0;
+  }
+  .hero .hero-3 {
+    grid-area: hero3;
+    padding: 0;
+  }
+  .hero .hero-3 img {
+    height: 100%;
+  }
+  .hero .hero-4 {
+    grid-area: hero4;
+    padding: 0;
+  }
+  .hero .hero-5 {
+    grid-area: hero5;
+    padding: 0;
+  }
+  .hero .hero-5 .hero-5__title {
+    font-size: 45px;
+  }
+}
+
+.hero-location {
+  position: relative;
+  background-color: #151515;
+}
+.hero-location .container-location {
+  padding: 0 20px 0 20px;
+}
+.hero-location .hero-location__title {
+  font-family: "Big Shoulders", sans-serif;
+  font-size: 50px;
+  font-weight: 900;
+  line-height: 45px;
+  color: #FFFFFF;
+  padding-bottom: 30px;
+  padding-top: 45px;
+}
+.hero-location .hero-location__subtitle {
+  font-family: "Big Shoulders", sans-serif;
+  font-size: 30px;
+  font-weight: 900;
+  line-height: 45px;
+  color: #D5966C;
+  padding-bottom: 15px;
+}
+.hero-location .hero-location__direction {
+  font-family: "Outfit", sans-serif;
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 30px;
+  color: #FFFFFF;
+  padding-bottom: 20px;
+}
+.hero-location .hero-location__description {
+  font-family: "Outfit", sans-serif;
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 25px;
+  color: #FFFFFF;
+  padding-bottom: 50px;
+}
+@media (min-width: 768px) {
+  .hero-location .container-location {
+    padding-top: 70px;
+    padding-bottom: 45px;
+    display: flex;
+    gap: 20px;
+  }
+  .hero-location .container-location .container-location2 {
+    width: 55%;
+    padding: 0;
+  }
+  .hero-location .container-location .hero-location__title {
+    padding-left: 33px;
+    padding-right: 10px;
+    padding-top: 7px;
+  }
+}
+@media (min-width: 1200px) {
+  .hero-location .container-location {
+    padding-top: 70px;
+    padding-bottom: 45px;
+    display: flex;
+    justify-content: space-between;
+    gap: 100px;
+  }
+  .hero-location .container-location .container-location2 {
+    width: 50%;
+    padding: 0;
+    padding-right: 150px;
+  }
+  .hero-location .container-location .hero-location__title {
+    padding-left: 123px;
+    padding-right: 100px;
+    padding-top: 7px;
+  }
+}
+
+footer.footer__principal {
+  padding-top: 40px;
+  padding-bottom: 20px;
+  padding-right: 10px;
+  padding-left: 10px;
+  background-color: #151515;
+}
+footer.footer__principal .container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+}
+footer.footer__principal .footer__logo {
+  width: 100px;
+  padding-bottom: 30px;
+}
+footer.footer__principal .footer__description {
+  font-family: "Outfit", sans-serif;
+  font-size: 14px;
+  font-weight: 300;
+  width: 280px;
+  line-height: 22px;
+  color: #FFFFFF;
+  padding-bottom: 30px;
+  align-items: center;
+}
+footer.footer__principal .footer__icon {
+  color: #FFFFFF;
+  display: flex;
+  gap: 18px;
+  padding-bottom: 30px;
+}
+@media (min-width: 768px) {
+  footer.footer__principal .container {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  footer.footer__principal .container .footer__logo {
+    padding-left: 20px;
+  }
+  footer.footer__principal .container .footer__description {
+    padding-right: 25px;
+    margin-right: 30px;
+  }
+  footer.footer__principal .container .footer__icon {
+    padding-right: 20px;
+  }
+}
+@media (min-width: 1200px) {
+  footer.footer__principal .container {
+    display: flex;
+    padding-left: 60px;
+    padding-right: 60px;
+  }
+  footer.footer__principal .container .footer__logo {
+    margin-left: 40px;
+    padding-left: 10px;
+  }
+  footer.footer__principal .container .footer__logo a {
+    width: 1550px;
+  }
+  footer.footer__principal .container .footer__description {
+    font-size: 18px;
+    width: 400px;
+  }
+  footer.footer__principal .container .footer__icon {
+    padding-right: 50px;
+  }
+}
+
+footer.footer-location {
+  padding-top: 40px;
+  padding-bottom: 20px;
+  padding-right: 10px;
+  padding-left: 10px;
+  background-color: #D5966C;
+}
+footer.footer-location .container-location {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+  padding: 0 20px 0 20px;
+}
+footer.footer-location .footer-location__logo {
+  width: 100px;
+  padding-bottom: 30px;
+}
+footer.footer-location .footer-location__description {
+  font-family: "Outfit", sans-serif;
+  font-size: 14px;
+  font-weight: 300;
+  width: 280px;
+  line-height: 22px;
+  color: #151515;
+  padding-bottom: 30px;
+  align-items: center;
+}
+footer.footer-location .footer-location__icon {
+  color: #FFFFFF;
+  display: flex;
+  gap: 18px;
+  padding-bottom: 30px;
+}
+@media (min-width: 768px) {
+  footer.footer-location .container-location {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  footer.footer-location .container-location .footer-location__logo {
+    padding-left: 20px;
+  }
+  footer.footer-location .container-location .footer-location__description {
+    padding-right: 25px;
+    margin-right: 30px;
+  }
+  footer.footer-location .container-location .footer-location__icon {
+    padding-right: 20px;
+  }
+}
+@media (min-width: 1200px) {
+  footer.footer-location .container-location {
+    display: flex;
+    padding-left: 60px;
+    padding-right: 60px;
+  }
+  footer.footer-location .container-location .footer-location__logo {
+    margin-left: 40px;
+    padding-left: 20px;
+  }
+  footer.footer-location .container-location .footer-location__logo a {
+    width: 1550px;
+  }
+  footer.footer-location .container-location .footer-location__description {
+    font-size: 18px;
+    width: 400px;
+  }
+  footer.footer-location .container-location .footer-location__icon {
+    padding-right: 20px;
+  }
+}
+
+header.header__principal {
+  padding-bottom: 100px;
+  position: relative;
+}
+header.header__principal .container {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+@media (min-width: 1200px) {
+  header.header__principal .container {
+    margin-left: 100px;
+    padding-left: 150px;
+  }
+}
+header.header__principal .header__title {
+  font-family: "Big Shoulders", sans-serif;
+  font-size: 60px;
+  font-weight: 900;
+  line-height: 50px;
+  color: #151515;
+  padding-bottom: 30px;
+  padding-top: 10px;
+}
+@media (min-width: 1200px) {
+  header.header__principal .header__title {
+    color: #FFFFFF;
+    font-size: 96px;
+    position: absolute;
+    top: -55px;
+    left: -432px;
+  }
+}
+header.header__principal .header__description {
+  font-family: "Outfit", sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 22px;
+  color: #151515;
+  padding-bottom: 20px;
+}
+@media (min-width: 1200px) {
+  header.header__principal .header__description {
+    position: absolute;
+    top: -42px;
+    width: 350px;
+    font-size: 22px;
+    font-weight: 300;
+    padding-bottom: 50px;
+  }
+}
+header.header__principal .btn-location {
+  display: inline-flex;
+  text-decoration: none;
+  font-family: "Big Shoulders", sans-serif;
+}
+@media (min-width: 1200px) {
+  header.header__principal .btn-location {
+    position: absolute;
+    top: 135px;
+  }
+}
+header.header__principal .btn-location__text {
+  background-color: #151515;
+  color: white;
+  padding: 24px 40px;
+  font-family: "Big Shoulders", sans-serif;
+  font-size: 20px;
+  font-weight: 800;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+}
+header.header__principal .btn-location__text:hover {
+  background-color: #D5966C;
+}
+header.header__principal .btn-location__icon {
+  width: 56px;
+  background-color: #D5966C;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+header.header__principal .btn-location__icon:hover {
+  background-color: #151515;
+}
+header.header__principal .btn-location__icon img {
+  width: 10px;
+}
+@media (min-width: 768px) {
+  header.header__principal .container {
+    position: absolute;
+    top: -570%;
+    right: -2%;
+    width: 50%;
+  }
+  header.header__principal .header__title {
+    font-size: 70px;
+    line-height: 70px;
+  }
+}
+
+header.header-location {
+  position: relative;
+  margin: 0;
+  padding: 0%;
+}
+header.header-location .header-location__img {
+  display: block;
+  overflow: hidden;
+}
+header.header-location .header-location__img figure {
+  margin: 0;
+}
+header.header-location .header-location__img img {
+  width: 100%;
+  height: 550px;
+  object-fit: cover;
+  object-position: center;
+  margin-bottom: 0px;
+  position: relative;
+}
+header.header-location .btn-location-2 {
+  display: inline-flex;
+  text-decoration: none;
+  font-family: "Big Shoulders", sans-serif;
+  position: absolute;
+  top: 0;
+}
+@media (min-width: 768px) {
+  header.header-location .btn-location-2 {
+    top: 0;
+    right: 62%;
+  }
+}
+header.header-location .btn-location__text {
+  background-color: #151515;
+  color: white;
+  padding: 20px 25px;
+  font-family: "Big Shoulders", sans-serif;
+  font-size: 20px;
+  font-weight: 800;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+}
+header.header-location .btn-location__text:hover {
+  background-color: #D5966C;
+}
+header.header-location .btn-location__icon {
+  width: 56px;
+  background-color: #D5966C;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+header.header-location .btn-location__icon:hover {
+  background-color: #151515;
+}
+header.header-location .btn-location__icon img {
+  width: 10px;
+}
+
+.container_info {
+  padding-left: 16px;
+  padding-right: 16px;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+}
+@media (min-width: 1024px) {
+  .container_info {
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+}
+@media (min-width: 768px) {
+  .container_info {
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+}
+
+body {
+  padding: 0px;
+  position: relative;
+  width: 100%;
+}
+body .header__img figure {
+  margin: 0;
+  width: 100%;
+  height: 260px;
+  overflow: hidden;
+}
+body .header__img figure img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+@media (min-width: 768px) {
+  body .header__img figure {
+    margin: 0;
+    width: 60%;
+    height: 700px;
+    overflow: hidden;
+  }
+}
+@media (min-width: 1200px) {
+  body .header__img figure {
+    margin-left: 400px;
+    width: 400px;
+    height: 800px;
+  }
+}
+@media (min-width: 1200px) {
+  body::before {
+    content: "";
+    position: absolute;
+    width: 400px;
+    height: 800px;
+    background-color: #151515;
+    z-index: 0;
+    background-position: top left;
+  }
+}
+
+html * {
+  font-family: "Outfit", sans-serif;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+/*# sourceMappingURL=style.css.map */

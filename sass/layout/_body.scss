@@ -1,0 +1,49 @@
+body {
+    padding: 0px;
+    position: relative;
+    width: 100%;
+    .header__img {
+        figure {
+            margin: 0;
+            width: 100%;
+            height: 260px;
+            overflow: hidden;
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+        @include breakpoint(tablet) {
+            figure {
+                margin: 0;
+                width: 60%;
+                height: 700px;
+                overflow: hidden;
+            }
+        }
+
+        @include breakpoint(desktop) {
+            figure {
+                margin-left: 400px;
+                width: 400px;
+                height: 800px;
+            }
+        }
+    }
+
+    @include breakpoint(desktop) {
+        &::before {
+                content: "";
+                position: absolute;
+                width: 400px;
+                height: 800px;
+                background-color: $black;
+                z-index: 0;
+                background-position: top left;
+            }
+    }
+}
+
+
+
