@@ -2,6 +2,11 @@ footer.footer__principal {
     
     background-color: $black-light;
     .container {
+        padding-left: 16px;
+        padding-right: 16px;
+        max-width: 1200px;
+        margin-left: auto;
+        margin-right: auto;
     }
 
 }
