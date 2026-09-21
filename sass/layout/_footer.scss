@@ -7,6 +7,21 @@ footer.footer__principal {
         max-width: 1200px;
         margin-left: auto;
         margin-right: auto;
+        .footer__description {
+            h1  {
+                font-size: 40px;
+                padding-bottom: 15px;
+                text-align: center;
+                padding-top: 40px;
+            }
+
+            p {
+                font-size: 18px;
+                color: $grey;
+                text-align: center;
+                padding-bottom: 40px;
+            }
+        }
     }
 
 }

@@ -1,5 +1,102 @@
 .hero {
     margin-bottom: 120px;
+    position: relative;
+    .hero__img {
+        position: absolute;
+        top: -260px;
+        right: 82px;
+        z-index: -1;
+        width: 220px;
+    }
+    .hero__img-circle {
+        position: absolute;
+        top: 355px;
+        right: -250px;
+        z-index: -1;
+        width: 210px;
+    }
+    .hero__content {
+        padding-top: 250px;
+        position: relative;
+        .hero__title {
+            position: relative;
+            font-size: 40px;
+            font-weight: 700;
+            line-height: 1.2;
+            margin-bottom: 20px;
+            text-align: center;
+            .hero__name{
+                &::before {
+                    position: absolute;
+                    content: "";
+                    height: 5px;
+                    width: 237px;
+                    background-color: $green;
+                    top: 95%;
+                }
+            }
+        }
+        .hero__description {
+            font-size: 18px;
+            line-height: 1.5;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        .hero__btn {
+            display: flex;
+            justify-content: center;
+            padding-bottom: 80px;
+        }
+
+        .hero__line {
+            &::before {
+                position: absolute;
+                content: "";
+                height: 1px;
+                width: 100%;
+                background-color: $white;
+                top: 600px;
+            }
+        }
+
+        .hero__list {
+            padding-top: 70px;
+            .container {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                article {
+                    padding-bottom: 30px;
+                    h2 {
+                        font-size: 40px;
+                        font-weight: 700;
+                        line-height: 1.2;
+                        margin-bottom: 5px;
+                        text-align: center;
+                    }
+
+                    p {
+                        font-size: 18px;
+                        line-height: 1.5;
+                        text-align: center;
+                        color: $grey;
+                    }
+                    
+                }
+            }
+        }
+
+        .hero__line2 {
+            &::before {
+                position: absolute;
+                content: "";
+                height: 1px;
+                width: 100%;
+                background-color: $white;
+                top: 1350px;
+            }
+        }
+    }
     @include breakpoint(desktop) {
             padding-top: 70px;
             padding-left: 100px;

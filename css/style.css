@@ -51,6 +51,92 @@ h5 {
 
 .hero {
   margin-bottom: 120px;
+  position: relative;
+}
+.hero .hero__img {
+  position: absolute;
+  top: -260px;
+  right: 82px;
+  z-index: -1;
+  width: 220px;
+}
+.hero .hero__img-circle {
+  position: absolute;
+  top: 355px;
+  right: -250px;
+  z-index: -1;
+  width: 210px;
+}
+.hero .hero__content {
+  padding-top: 250px;
+  position: relative;
+}
+.hero .hero__content .hero__title {
+  position: relative;
+  font-size: 40px;
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 20px;
+  text-align: center;
+}
+.hero .hero__content .hero__title .hero__name::before {
+  position: absolute;
+  content: "";
+  height: 5px;
+  width: 237px;
+  background-color: #4EE1A0;
+  top: 95%;
+}
+.hero .hero__content .hero__description {
+  font-size: 18px;
+  line-height: 1.5;
+  text-align: center;
+  margin-bottom: 30px;
+}
+.hero .hero__content .hero__btn {
+  display: flex;
+  justify-content: center;
+  padding-bottom: 80px;
+}
+.hero .hero__content .hero__line::before {
+  position: absolute;
+  content: "";
+  height: 1px;
+  width: 100%;
+  background-color: #FFFFFF;
+  top: 600px;
+}
+.hero .hero__content .hero__list {
+  padding-top: 70px;
+}
+.hero .hero__content .hero__list .container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.hero .hero__content .hero__list .container article {
+  padding-bottom: 30px;
+}
+.hero .hero__content .hero__list .container article h2 {
+  font-size: 40px;
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 5px;
+  text-align: center;
+}
+.hero .hero__content .hero__list .container article p {
+  font-size: 18px;
+  line-height: 1.5;
+  text-align: center;
+  color: #D9D9D9;
+}
+.hero .hero__content .hero__line2::before {
+  position: absolute;
+  content: "";
+  height: 1px;
+  width: 100%;
+  background-color: #FFFFFF;
+  top: 1350px;
 }
 @media (min-width: 1200px) {
   .hero {
@@ -70,14 +156,38 @@ footer.footer__principal .container {
   margin-left: auto;
   margin-right: auto;
 }
+footer.footer__principal .container .footer__description h1 {
+  font-size: 40px;
+  padding-bottom: 15px;
+  text-align: center;
+  padding-top: 40px;
+}
+footer.footer__principal .container .footer__description p {
+  font-size: 18px;
+  color: #D9D9D9;
+  text-align: center;
+  padding-bottom: 40px;
+}
 
 header.header__principal {
   padding-bottom: 100px;
+  position: relative;
 }
 header.header__principal .container {
   display: flex;
-  flex-direction: center;
-  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  padding: 30px 0;
+}
+header.header__principal .container .header__logo {
+  padding-bottom: 25px;
+}
+header.header__principal .container .header__social a {
+  padding-right: 17px;
+  padding-left: 17px;
+}
+header.header__principal .container .header__social a .img:hover {
+  color: #4EE1A0;
 }
 @media (min-width: 1200px) {
   header.header__principal .container {
@@ -111,7 +221,36 @@ body {
   position: relative;
   width: 100%;
   background-color: #151515;
+  overflow-x: visible;
 }
+.project__items {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 35px;
+}
+.project__items h1 {
+  font-size: 40px;
+}
+
+.projects .container article img {
+  padding-bottom: 20px;
+}
+.projects .container article .project__content {
+  padding-bottom: 40px;
+}
+.projects .container article .project__content h2 {
+  padding-bottom: 15px;
+}
+.projects .container article .project__content p {
+  padding-bottom: 20px;
+  font-size: 22px;
+  color: #D9D9D9;
+}
+.projects .container article .project__content a {
+  margin-right: 30px;
+}
+
 html * {
   font-family: "Space Grotesk", sans-serif;
 }
