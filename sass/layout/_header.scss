@@ -1,10 +1,9 @@
 header.header__principal {
     padding-bottom: 100px;
-    position: relative;
     .container {
         display: flex;
-        flex-direction: column;
-        position: relative;
+        flex-direction: center;
+        justify-content: center;
 
         @include breakpoint(desktop) {
             margin-left: 100px;

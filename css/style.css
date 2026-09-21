@@ -73,12 +73,11 @@ footer.footer__principal .container {
 
 header.header__principal {
   padding-bottom: 100px;
-  position: relative;
 }
 header.header__principal .container {
   display: flex;
-  flex-direction: column;
-  position: relative;
+  flex-direction: center;
+  justify-content: center;
 }
 @media (min-width: 1200px) {
   header.header__principal .container {
