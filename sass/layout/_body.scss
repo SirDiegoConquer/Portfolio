@@ -3,21 +3,33 @@ body {
     position: relative;
     width: 100%;
     background-color: $black;
-    overflow-x: visible;
-    .header__img {
-        
-        
-        @include breakpoint(tablet) {
-            
-        }
-
-        @include breakpoint(desktop) {
-
-        }
+    overflow-x: hidden;
+    
+    &::before {
+        content: "";
+        width: 100%;
+        height: 600px;
+        background-image: url("../img/formacion-ovalo.svg");
+        position: absolute;
+        background-repeat: no-repeat;
+        background-position:  0px 140px;
+        overflow: hidden;
+        z-index: -1;
     }
 
-    @include breakpoint(desktop) {
-    
+    &::after {
+        content: "";
+        width: 100%;
+        height: 600px;
+        top: 1535px;
+        left: 237px;
+        background-image: url("../img/formacion-ovalo.svg");
+        position: absolute;
+        background-repeat: no-repeat;
+        background-position:  top right;
+        transform: scaleX(-1);
+        overflow: hidden;
+        z-index: -1;
     }
 }
 
