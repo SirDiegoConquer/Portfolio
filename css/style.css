@@ -53,12 +53,25 @@ h5 {
   margin-bottom: 120px;
   position: relative;
 }
+@media (min-width: 768px) {
+  .hero {
+    margin-bottom: 40px;
+  }
+}
 .hero .hero__img {
   position: absolute;
   top: -260px;
   right: 82px;
   z-index: -1;
   width: 220px;
+}
+@media (min-width: 768px) {
+  .hero .hero__img {
+    top: -128px;
+    right: -23px;
+    width: 300px;
+    z-index: -1;
+  }
 }
 .hero .hero__img-circle {
   position: absolute;
@@ -67,9 +80,29 @@ h5 {
   z-index: -1;
   width: 210px;
 }
+@media (min-width: 768px) {
+  .hero .hero__img-circle {
+    z-index: 0;
+    top: 430px;
+    left: 237px;
+  }
+}
 .hero .hero__content {
   padding-top: 250px;
   position: relative;
+}
+@media (min-width: 768px) {
+  .hero .hero__content {
+    padding-top: 0px;
+  }
+}
+@media (min-width: 768px) {
+  .hero .hero__content .hero__container-top {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 67%;
+  }
 }
 .hero .hero__content .hero__title {
   position: relative;
@@ -79,6 +112,15 @@ h5 {
   margin-bottom: 20px;
   text-align: center;
 }
+@media (min-width: 768px) {
+  .hero .hero__content .hero__title {
+    font-size: 72px;
+    line-height: 1.1;
+    text-align: start;
+    letter-spacing: -1;
+    margin-bottom: 40px;
+  }
+}
 .hero .hero__content .hero__title .hero__name::before {
   position: absolute;
   content: "";
@@ -87,24 +129,42 @@ h5 {
   background-color: #4EE1A0;
   top: 95%;
 }
+@media (min-width: 768px) {
+  .hero .hero__content .hero__title .hero__name::before {
+    width: 425px;
+    left: 0px;
+  }
+}
+@media (min-width: 768px) {
+  .hero .hero__content .hero__title span {
+    display: block;
+  }
+}
 .hero .hero__content .hero__description {
   font-size: 18px;
   line-height: 1.5;
   text-align: center;
   margin-bottom: 30px;
 }
+@media (min-width: 768px) {
+  .hero .hero__content .hero__description {
+    font-size: 18px;
+    text-align: start;
+    line-height: 28px;
+    padding-right: 28px;
+    letter-spacing: 2.5;
+    color: #D9D9D9;
+  }
+}
 .hero .hero__content .hero__btn {
   display: flex;
   justify-content: center;
   padding-bottom: 80px;
 }
-.hero .hero__content .hero__line::before {
-  position: absolute;
-  content: "";
-  height: 1px;
-  width: 100%;
-  background-color: #FFFFFF;
-  top: 600px;
+.hero .hero__content .hero__line {
+  border-top: 1px solid #FFFFFF;
+  margin-bottom: 20px;
+  margin-top: 20px;
 }
 .hero .hero__content .hero__list {
   padding-top: 70px;
@@ -114,8 +174,19 @@ h5 {
   flex-direction: column;
   align-items: center;
 }
+@media (min-width: 768px) {
+  .hero .hero__content .hero__list .container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+}
 .hero .hero__content .hero__list .container article {
   padding-bottom: 30px;
+}
+@media (min-width: 768px) {
+  .hero .hero__content .hero__list .container article {
+    padding-bottom: 50px;
+  }
 }
 .hero .hero__content .hero__list .container article h2 {
   font-size: 40px;
@@ -124,19 +195,34 @@ h5 {
   margin-bottom: 5px;
   text-align: center;
 }
+@media (min-width: 768px) {
+  .hero .hero__content .hero__list .container article h2 {
+    padding-bottom: 10px;
+    text-align: start;
+  }
+}
 .hero .hero__content .hero__list .container article p {
   font-size: 18px;
   line-height: 1.5;
   text-align: center;
   color: #D9D9D9;
 }
-.hero .hero__content .hero__line2::before {
-  position: absolute;
-  content: "";
-  height: 1px;
-  width: 100%;
-  background-color: #FFFFFF;
-  top: 1350px;
+@media (min-width: 768px) {
+  .hero .hero__content .hero__list .container article p {
+    padding-bottom: 15px;
+    text-align: start;
+  }
+}
+.hero .hero__content .hero__line2 {
+  border-top: 1px solid #FFFFFF;
+  margin-bottom: 20px;
+  margin-top: 10px;
+}
+@media (min-width: 768px) {
+  .hero .hero__content .hero__line2 {
+    border-top: 0px;
+    margin: 0px;
+  }
 }
 @media (min-width: 1200px) {
   .hero {
@@ -261,14 +347,33 @@ header.header__principal {
   padding-bottom: 100px;
   position: relative;
 }
+@media (min-width: 768px) {
+  header.header__principal {
+    padding-bottom: 40px;
+  }
+}
 header.header__principal .container {
   display: flex;
   flex-direction: column;
   align-items: center;
   padding: 30px 0;
 }
+@media (min-width: 768px) {
+  header.header__principal .container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 25px;
+  }
+}
 header.header__principal .container .header__logo {
   padding-bottom: 25px;
+}
+@media (min-width: 768px) {
+  header.header__principal .container .header__logo {
+    padding: 0px;
+  }
 }
 header.header__principal .container .header__social a {
   padding-right: 17px;
@@ -276,6 +381,17 @@ header.header__principal .container .header__social a {
 }
 header.header__principal .container .header__social a .img:hover {
   color: #4EE1A0;
+}
+@media (min-width: 768px) {
+  header.header__principal .container .header__social a {
+    padding: 0px;
+    padding-right: 25px;
+  }
+}
+@media (min-width: 768px) {
+  header.header__principal .container .header__social a.header__social1 {
+    padding-right: 0px;
+  }
 }
 @media (min-width: 1200px) {
   header.header__principal .container {
@@ -320,13 +436,19 @@ body::before {
   background-repeat: no-repeat;
   background-position: 0px 140px;
   overflow: hidden;
+  overflow-x: hidden;
   z-index: -1;
+}
+@media (min-width: 768px) {
+  body::before {
+    background-position: 0px 60px;
+  }
 }
 body::after {
   content: "";
   width: 100%;
   height: 600px;
-  top: 1535px;
+  top: 1555px;
   left: 237px;
   background-image: url("../img/formacion-ovalo.svg");
   position: absolute;
@@ -336,6 +458,18 @@ body::after {
   overflow: hidden;
   z-index: -1;
 }
+@media (min-width: 768px) {
+  body::after {
+    top: 1070px;
+    left: 580px;
+  }
+}
+
+html {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
+}
 
 .project__items {
   display: flex;
@@ -343,10 +477,27 @@ body::after {
   align-items: center;
   padding-bottom: 35px;
 }
+@media (min-width: 768px) {
+  .project__items {
+    padding-bottom: 50px;
+  }
+}
 .project__items h1 {
   font-size: 40px;
 }
+@media (min-width: 768px) {
+  .project__items h1 {
+    font-size: 72px;
+  }
+}
 
+@media (min-width: 768px) {
+  .projects .container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+  }
+}
 .projects .container article img {
   padding-bottom: 20px;
 }

@@ -3,13 +3,24 @@
     justify-content: space-between;
     align-items: center;
     padding-bottom: 35px;
+    @include breakpoint(tablet){
+        padding-bottom: 50px;
+    }
     h1 {
         font-size: 40px;
+        @include breakpoint(tablet){
+            font-size: 72px;
+        }
     }
 }
 
 .projects {
     .container {
+        @include breakpoint(tablet){
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
         article {
             img {
                 padding-bottom: 20px;

@@ -31,14 +31,16 @@
   <header class="header__principal">
     <div class="container">
       <div class="header__logo">
-      <a href="#"><img src="img/logo-portfolio.svg" alt="Logotipo de Portfolio"></a>
+      <a href="#">
+        <img src="img/logo-portfolio.svg" alt="Logotipo de Portfolio">
+      </a>
       </div>
 
       <div class="header__social">
         <a href="#"><img src="img/git-hub-logo.svg" alt="logo de git hub"></a>
         <a href="#"><img src="img/frontendmentor-logo.svg" alt="logo de frontedmentor"></a>
         <a href="#"><img src="img/LinkedIn-logo.svg" alt="logo de linkedin"></a>
-        <a href="#"><img src="img/twitter-logo.svg" alt="logo de twitter"></a>
+        <a class="header__social1" href="#"><img src="img/twitter-logo.svg" alt="logo de twitter"></a>
       </div>
 
     </div>
@@ -48,23 +50,30 @@
     <div class="hero">
       <div class="container">
         <div class="hero__img">
-          <figure>
-            <img src="img/foto-mobile.png" alt="Foto de Adam Keyes">
-          </figure>
+          <picture>
+            <source media="(min-width: 768px)" srcset="img/foto-tablet.png">
+            <img src="img/foto-mobile.png" alt="Descripción de la imagen">
+          </picture>
 
           <span class="hero__img-circle"><img src="img/circulo.svg"></span>
         </div>
         <div class="hero__content">
-          <h1 class="hero__title">
-            Nice to meet you! I'm <span class="hero__name">Adam Keyes.</span>
-          </h1>
+          <div class="hero__container-top">
 
-          <p class="hero__description">
-            Based in the UK, I’m a front-end developer 
-            passionate about building accessible web apps that users love.
-          </p>
-          <div class="hero__btn">
-            <a href="#" class="btn">CONTACT ME</a>
+            <h1 class="hero__title">
+              <span>Nice to</span>
+              <span>meet you! I'm</span>
+              <span class="hero__name">Adam Keyes.</span>
+            </h1>
+  
+            <p class="hero__description">
+              Based in the UK, I’m a front-end developer 
+              passionate about building accessible web apps that users love.
+            </p>
+  
+            <div class="hero__btn">
+              <a href="#" class="btn">CONTACT ME</a>
+            </div>
           </div>
 
           <div class="hero__line">

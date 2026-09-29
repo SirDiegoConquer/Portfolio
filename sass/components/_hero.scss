@@ -1,12 +1,21 @@
 .hero {
     margin-bottom: 120px;
     position: relative;
+    @include breakpoint(tablet){
+        margin-bottom: 40px;
+    }
     .hero__img {
         position: absolute;
         top: -260px;
         right: 82px;
         z-index: -1;
         width: 220px;
+        @include breakpoint(tablet){
+            top: -128px;
+            right: -23px;
+            width: 300px;
+            z-index: -1;
+        }
     }
     .hero__img-circle {
         position: absolute;
@@ -14,10 +23,26 @@
         right: -250px;
         z-index: -1;
         width: 210px;
+        @include breakpoint(tablet){
+            z-index: 0;
+            top: 430px;
+           left: 237px;
+        }
     }
     .hero__content {
         padding-top: 250px;
         position: relative;
+        @include breakpoint(tablet){
+            padding-top: 0px;
+        }
+        .hero__container-top {
+            @include breakpoint(tablet){
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+                width: 67%;
+            }
+        }
         .hero__title {
             position: relative;
             font-size: 40px;
@@ -25,15 +50,31 @@
             line-height: 1.2;
             margin-bottom: 20px;
             text-align: center;
+            @include breakpoint(tablet) {
+                font-size: 72px;
+                line-height: 1.1;
+                text-align: start;
+                letter-spacing: -1;
+                margin-bottom: 40px;
+            }
             .hero__name{
                 &::before {
                     position: absolute;
                     content: "";
-                    height: 5px;
+                    height:5px;
                     width: 237px;
                     background-color: $green;
                     top: 95%;
+                    @include breakpoint(tablet) {
+                        width: 425px;
+                        left: 0px;
+                    }
                 }
+            }
+        }
+        .hero__title span {
+            @include breakpoint(tablet){
+                display: block;
             }
         }
         .hero__description {
@@ -41,6 +82,14 @@
             line-height: 1.5;
             text-align: center;
             margin-bottom: 30px;
+            @include breakpoint(tablet){
+                font-size: 18px;
+                text-align: start;
+                line-height: 28px;
+                padding-right: 28px;
+                letter-spacing: 2.5;
+                color: $grey;
+            }
         }
         .hero__btn {
             display: flex;
@@ -49,14 +98,17 @@
         }
 
         .hero__line {
-            &::before {
-                position: absolute;
-                content: "";
-                height: 1px;
-                width: 100%;
-                background-color: $white;
-                top: 600px;
-            }
+            // &::before {
+            //     position: absolute;
+            //     content: "";
+            //     height: 1px;
+            //     width: 100%;
+            //     background-color: $white;
+            //     top: 600px;
+            // }
+            border-top: 1px solid $white;
+            margin-bottom: 20px;
+            margin-top: 20px;
         }
 
         .hero__list {
@@ -65,14 +117,26 @@
                 display: flex;
                 flex-direction: column;
                 align-items: center;
+                @include breakpoint(tablet) {
+                    display: grid;
+                    grid-template-columns: 1fr 1fr;
+                    
+                }
                 article {
                     padding-bottom: 30px;
+                    @include breakpoint(tablet){
+                        padding-bottom: 50px;
+                    }
                     h2 {
                         font-size: 40px;
                         font-weight: 700;
                         line-height: 1.2;
                         margin-bottom: 5px;
                         text-align: center;
+                        @include breakpoint(tablet){
+                            padding-bottom: 10px;
+                            text-align: start;
+                        }
                     }
 
                     p {
@@ -80,6 +144,10 @@
                         line-height: 1.5;
                         text-align: center;
                         color: $grey;
+                        @include breakpoint(tablet){
+                            padding-bottom: 15px;
+                            text-align: start;
+                        }
                     }
                     
                 }
@@ -87,13 +155,20 @@
         }
 
         .hero__line2 {
-            &::before {
-                position: absolute;
-                content: "";
-                height: 1px;
-                width: 100%;
-                background-color: $white;
-                top: 1350px;
+            // &::before {
+            //     position: absolute;
+            //     content: "";
+            //     height: 1px;
+            //     width: 100%;
+            //     background-color: $white;
+            //     top: 1350px;
+            // }
+            border-top: 1px solid $white;
+            margin-bottom: 20px;
+            margin-top: 10px;
+            @include breakpoint(tablet){
+                border-top: 0px;
+                margin: 0px;
             }
         }
     }
