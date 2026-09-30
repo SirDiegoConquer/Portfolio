@@ -17,10 +17,19 @@ header.header__principal {
             align-items: center;
             padding-top: 25px;
         }
+        @include breakpoint(desktopxl){
+            padding: 0;
+            padding-top: 20px;
+            margin: 0;
+
+        }
         .header__logo {
             padding-bottom: 25px;
             @include breakpoint(tablet) {
                 padding: 0px;
+            }
+            @include breakpoint(desktopxl){
+
             }
         }
         .header__social {
@@ -49,10 +58,7 @@ header.header__principal {
             }
         }
 
-        @include breakpoint(desktop) {
-            margin-left: 100px;
-            padding-left: 150px;
-        }
+        
     }
 
 }

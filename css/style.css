@@ -224,13 +224,6 @@ h5 {
     margin: 0px;
   }
 }
-@media (min-width: 1200px) {
-  .hero {
-    padding-top: 70px;
-    padding-left: 100px;
-    padding-right: 100px;
-  }
-}
 
 footer.footer__principal {
   position: relative;
@@ -250,12 +243,23 @@ footer.footer__principal::before {
   overflow: hidden;
   z-index: 0;
 }
+@media (min-width: 768px) {
+  footer.footer__principal::before {
+    background-position: left top 530px;
+  }
+}
 footer.footer__principal .container {
   padding-left: 16px;
   padding-right: 16px;
   max-width: 1200px;
   margin-left: auto;
   margin-right: auto;
+}
+@media (min-width: 768px) {
+  footer.footer__principal .container .footer__container {
+    margin-left: 100px;
+    margin-right: 100px;
+  }
 }
 footer.footer__principal .container .footer__description h1 {
   font-size: 40px;
@@ -314,16 +318,39 @@ footer.footer__principal .container .footer__form .form__contact #message {
 footer.footer__principal .container .footer__form .form__contact #message::placeholder {
   padding-left: 20px;
 }
+@media (min-width: 768px) {
+  footer.footer__principal .container .footer__form .form__contact #message {
+    width: 100%;
+  }
+}
 footer.footer__principal .container .footer__form .form__contact #form__btn {
   margin-left: 252px;
   background-color: transparent;
   margin-top: 30px;
   margin-bottom: 40px;
 }
+@media (min-width: 768px) {
+  footer.footer__principal .container .footer__form .form__contact #form__btn {
+    margin-left: 395px;
+  }
+}
 footer.footer__principal .container .footer__line {
   border-top: 1px solid #FFFFFF;
   margin-bottom: 60px;
   margin-top: 60px;
+}
+@media (min-width: 768px) {
+  footer.footer__principal .container .footer__line {
+    margin-left: 0;
+    margin-right: 0;
+    margin-bottom: 20px;
+  }
+}
+@media (min-width: 768px) {
+  footer.footer__principal .container .container__final {
+    display: flex;
+    justify-content: space-between;
+  }
 }
 footer.footer__principal .container .footer__logo {
   display: flex;
@@ -367,6 +394,13 @@ header.header__principal .container {
     padding-top: 25px;
   }
 }
+@media (min-width: 1440px) {
+  header.header__principal .container {
+    padding: 0;
+    padding-top: 20px;
+    margin: 0;
+  }
+}
 header.header__principal .container .header__logo {
   padding-bottom: 25px;
 }
@@ -393,12 +427,6 @@ header.header__principal .container .header__social a .img:hover {
     padding-right: 0px;
   }
 }
-@media (min-width: 1200px) {
-  header.header__principal .container {
-    margin-left: 100px;
-    padding-left: 150px;
-  }
-}
 
 .container_info {
   padding-left: 16px;
@@ -417,6 +445,15 @@ header.header__principal .container .header__social a .img:hover {
   .container_info {
     padding-left: 24px;
     padding-right: 24px;
+  }
+}
+@media (min-width: 1440px) {
+  .container_info {
+    max-width: 1440px;
+    padding-left: 100px;
+    padding-right: 100px;
+    margin-left: 26px;
+    margin-right: 26px;
   }
 }
 

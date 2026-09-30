@@ -14,6 +14,9 @@ footer.footer__principal {
         background-position: left top 440px;
         overflow: hidden;
         z-index: 0;
+        @include breakpoint(tablet){
+            background-position: left top 530px;
+        }
     }
     .container {
         padding-left: 16px;
@@ -21,6 +24,16 @@ footer.footer__principal {
         max-width: 1200px;
         margin-left: auto;
         margin-right: auto;
+        // @include breakpoint(tablet){
+        //     margin-left: 100px;
+        //     margin-right: 100px;
+        // }
+        .footer__container{
+            @include breakpoint(tablet){
+            margin-left: 100px;
+            margin-right: 100px;
+        }
+        }
         .footer__description {
             h1  {
                 font-size: 40px;
@@ -89,6 +102,9 @@ footer.footer__principal {
                         &::placeholder {
                             padding-left: 20px;
                         }
+                        @include breakpoint(tablet){
+                            width: 100%;
+                        }
                     }
 
                     #form__btn {
@@ -97,6 +113,9 @@ footer.footer__principal {
                         background-color: transparent;
                         margin-top: 30px;
                         margin-bottom: 40px;
+                        @include breakpoint(tablet){
+                            margin-left: 395px;
+                        }
                     }
             }
         }
@@ -105,6 +124,18 @@ footer.footer__principal {
             border-top: 1px solid $white;
             margin-bottom: 60px;
             margin-top: 60px;
+            @include breakpoint(tablet){
+                margin-left: 0;
+                margin-right: 0;
+                margin-bottom: 20px;
+            }
+        }
+
+        .container__final {
+            @include breakpoint(tablet){
+            display: flex;
+            justify-content: space-between;
+        }
         }
 
         .footer__logo {
