@@ -56,9 +56,11 @@ header.header__principal {
             @include breakpoint(tablet) {
                 padding-right: 0px;
             }
+            @include breakpoint(desktopxl) {
+                padding-right: 25px;
+            }
         }
 
-        
     }
-
+    
 }

@@ -22,9 +22,29 @@
             gap: 20px;
         }
         article {
-            img {
-                padding-bottom: 20px;
+            position: relative;
+            .project__1 {
+            @include breakpoint(desktopxl){
+                width: 100%;
             }
+            }
+            img {
+                position: relative;
+                padding-bottom: 20px;
+                &::after {
+                content: "";
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background-color: rgba(0, 0, 0, 0.75); /* Capa oscura */
+                opacity: 0;
+                visibility: hidden;
+                transition: opacity 0.3s ease, visibility 0.3s ease;
+            }
+            }
+            
             .project__content {
                 padding-bottom: 40px;
                 h2 {
@@ -39,8 +59,70 @@
 
                 a {
                     margin-right: 30px;
+                    @include breakpoint(desktopxl){
+                        position: absolute;
+                        left: 50%;
+                        z-index: 2;
+                        opacity: 0;
+                        visibility: hidden;
+                        transition: opacity 0.3s ease, visibility 0.3s ease, transform 0.3s ease;
+
+                        /* Posicionamiento vertical de cada botón sobre la imagen */
+                        &:nth-of-type(1) { /* VIEW PROJECT */
+                            top: 35%;
+                            transform: translate(-50%, -50%);
+                        }
+
+                        &:nth-of-type(2) { /* VIEW CODE */
+                            top: 55%;
+                            transform: translate(-50%, -50%);
+                        }
+                    }
                 }
             }
         }
     }
+    .project__article:hover {
+    /* Muestra la capa oscura sobre la imagen */
+    .project__img::after {
+      opacity: 1;
+      visibility: visible;
+    }
+
+    /* Muestra los dos botones centrados */
+    .project__content a.btn {
+      opacity: 1;
+      visibility: visible;
+    }
+  }
+
+  .project__img {
+  position: relative;
+  display: block;
+
+  /* Capa oscura superpuesta */
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.75); /* Fondo oscuro */
+    z-index: 1;                            /* Asegura que quede SOBRE la imagen */
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+    pointer-events: none;                 /* Deja pasar el clic a los botones */
+  }
+}
+
+/* Al hacer hover en la tarjeta, mostramos el overlay */
+@include breakpoint(desktop) {
+  .project__article:hover .project__img::after {
+    opacity: 1;
+    visibility: visible;
+  }
+}
+
 }

@@ -14,8 +14,12 @@ footer.footer__principal {
         background-position: left top 440px;
         overflow: hidden;
         z-index: 0;
+        pointer-events: none;
         @include breakpoint(tablet){
             background-position: left top 530px;
+        }
+        @include breakpoint(desktopxl){
+            background-position: left top 300px;
         }
     }
     .container {
@@ -33,6 +37,11 @@ footer.footer__principal {
             margin-left: 100px;
             margin-right: 100px;
         }
+            @include breakpoint(desktopxl){
+                margin-left: 0;
+                margin-right: 0;
+                display: flex;
+            }
         }
         .footer__description {
             h1  {
@@ -40,6 +49,11 @@ footer.footer__principal {
                 padding-bottom: 15px;
                 text-align: center;
                 padding-top: 40px;
+                @include breakpoint(desktopxl){
+                    text-align: left;
+                    font-size: 70px;
+                    padding-bottom: 30px;
+                }
             }
 
             p {
@@ -47,11 +61,23 @@ footer.footer__principal {
                 color: $grey;
                 text-align: center;
                 padding-bottom: 40px;
+                @include breakpoint(desktopxl){
+                    text-align: left;
+                    padding-right: 85px;
+                }
+            }
+            @include breakpoint(desktopxl){
+                width: 50%;
+                padding-right: 50px;
             }
         }
 
         .footer__form {
             margin-top: 40px;
+            @include breakpoint(desktopxl){
+                width: 50%;
+                padding-left: 50px;
+            }
             .form__contact{
                 .form__group {
                     margin-bottom: 30px;
@@ -67,6 +93,10 @@ footer.footer__principal {
                         &::placeholder {
                             padding-left: 20px;
                         }
+                        &:focus {
+                            border-bottom-color: $green;
+                        }
+                          
                     }
                     textarea {
                         resize: none;
@@ -84,6 +114,10 @@ footer.footer__principal {
                     input:focus, textarea:focus {
                         outline: none;
                     }
+                    input:user-invalid, textarea:user-invalid {
+                        border-bottom-color: red;
+                    }
+                    
                 }
                 #message {
                         appearance: none;
@@ -102,6 +136,9 @@ footer.footer__principal {
                         &::placeholder {
                             padding-left: 20px;
                         }
+                        &:focus {
+                            border-bottom-color: $green;
+                        }
                         @include breakpoint(tablet){
                             width: 100%;
                         }
@@ -116,7 +153,11 @@ footer.footer__principal {
                         @include breakpoint(tablet){
                             margin-left: 395px;
                         }
+                        @include breakpoint(desktopxl){
+                            margin-left: 392px;
+                        }
                     }
+
             }
         }
 
@@ -149,10 +190,14 @@ footer.footer__principal {
             justify-content: center;
             padding-bottom: 40px;
             a {
+                color: $white;
                 padding-right: 17px;
                 padding-left: 17px;
-                &:hover {
+                img {
+                    color: $white;
+                    &:hover {
                     color: $green;
+                }
                 }
                
             }

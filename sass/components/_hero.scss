@@ -16,6 +16,12 @@
             width: 300px;
             z-index: -1;
         }
+        @include breakpoint(desktopxl){
+            top: -128px;
+            right: 0px;
+            width: 400px;
+            z-index: -1;
+        }
     }
     .hero__img-circle {
         position: absolute;
@@ -28,12 +34,20 @@
             top: 430px;
            left: 237px;
         }
+        @include breakpoint(desktopxl){
+            z-index: 0;
+            top: 615px;
+           left: -63px;
+        }
     }
     .hero__content {
         padding-top: 250px;
         position: relative;
         @include breakpoint(tablet){
             padding-top: 0px;
+        }
+        @include breakpoint(desktopxl){
+            padding-top: 100px;
         }
         .hero__container-top {
             @include breakpoint(tablet){
@@ -52,6 +66,13 @@
             text-align: center;
             @include breakpoint(tablet) {
                 font-size: 72px;
+                line-height: 1.1;
+                text-align: start;
+                letter-spacing: -1;
+                margin-bottom: 40px;
+            }
+            @include breakpoint(desktopxl) {
+                font-size: 80px;
                 line-height: 1.1;
                 text-align: start;
                 letter-spacing: -1;
@@ -76,6 +97,9 @@
             @include breakpoint(tablet){
                 display: block;
             }
+            @include breakpoint(desktopxl){
+                display: inline;
+            }
         }
         .hero__description {
             font-size: 18px;
@@ -90,11 +114,22 @@
                 letter-spacing: 2.5;
                 color: $grey;
             }
+            @include breakpoint(desktopxl){
+                font-size: 20px;
+                text-align: start;
+                line-height: 28px;
+                padding-right: 293px;
+                color: $grey;
+                padding-bottom: 30px;
+            }
         }
         .hero__btn {
             display: flex;
             justify-content: center;
             padding-bottom: 80px;
+            @include breakpoint(desktopxl){
+                padding-bottom: 220px;
+            }
         }
 
         .hero__line {
@@ -121,6 +156,10 @@
                     display: grid;
                     grid-template-columns: 1fr 1fr;
                     
+                }
+                @include breakpoint(desktopxl) {
+                    display: grid;
+                    grid-template-columns: 1fr 1fr 1fr;
                 }
                 article {
                     padding-bottom: 30px;

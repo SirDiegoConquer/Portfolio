@@ -38,6 +38,10 @@ body {
             top: 1070px;
             left: 580px;
         }
+        @include breakpoint(desktopxl){
+            top: 1070px;
+            left: 1255px;
+        }
     }
 }
 
